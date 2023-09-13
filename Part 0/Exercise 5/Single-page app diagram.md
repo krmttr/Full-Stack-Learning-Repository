@@ -3,9 +3,7 @@ sequenceDiagram
     participant browser
     participant server
 
-    note left of browser:
-    user opens the page 
-    end note
+    Note left of browser: User opens the page
 
     browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
     server-->browser: HTML-code
@@ -14,18 +12,12 @@ sequenceDiagram
     browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa.js
     server-->browser: spa.js
 
-    note over browser:
-    browser starts 
-    executing js-code 
-    that requests JSON 
-    data from server
-    end note
+    Note right of browser: Browser starts executing js-code that requests JSON data from server
 
     browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
     server-->browser: JSON file content: [{content: "",date: "2021-06-01T20:05:31.930Z"}, ...]
     browser->server: HTTP GET https://studies.cs.helsinki.fi/favicon.ico
     server-->browser: favicon.ico
 
-    note over browser: 
-    browser displays the new notes
+    Note right of browser: Browser displays the new note
 ```
