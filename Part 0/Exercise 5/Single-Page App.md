@@ -1,4 +1,7 @@
 ```mermaid
+sequenceDiagram
+    participant browser
+    participant server
 
 note left of browser:
 user opens the page 
